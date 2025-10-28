@@ -16,21 +16,25 @@ Show current working directory.
 pwd
 # Example output: /home/manuel/documents
 ```
-# Find
+## Find
 The find command is fantastic in the sense that it can be used both very simply or rather complex depending upon what it is you want to do exactly. However, let's stick to the fundamentals first.
 Exemple to find a document instead of navigating or going all into it we can just type the command find + -name + document.txt
 
 If we dont know the name we can just go with find -name *.txt . Where "Find" has been able to find every .txt file and has then given us the location of each one:
 
-# Grep 
+## Grep 
 The grep command allows us to search the contents of files for specific values that we are looking for.
 For exemple, we can hace more than 240 entries of one kind of file and a lot of text that we can't naviagte quickly with the commande cat
 We can use grep + one value and he will find it very quickly ex: grep "81.143.211.90" access.log
 # Search for an IP in an access log:
+```
 grep "81.143.211.90" /var/log/nginx/access.log
+```
+## Search recursively in a folder:
 
-# Search recursively in a folder:
+```
 grep -R "ERROR" /var/log/myapp/
+```
 
 
 & = Run a command and continue tyoping commands
