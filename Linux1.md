@@ -36,14 +36,44 @@ grep "81.143.211.90" /var/log/nginx/access.log
 grep -R "ERROR" /var/log/myapp/
 ```
 
+##Redirections & operators
 
-& = Run a command and continue tyoping commands
-&& = Run various commands one after the other but only if all of them are excuted correctly
-> To write and replace 
->> To add some text instead, it doesn't replace
+### & : put a command in background (shell job), or in some shells used with nohup.
+Example to run and continue typing:
 
-How i used it
-I used ls to read the directory, then i used echo >> folder to create a folder
-I checked that it is well created with ls
-I used the command rm folder && ls to erase it and then check if it was tryle erased
+```some_command &   # runs in background```
+
+### && : run second command only if first succeeds.
+
+```mkdir test && cd test   # cd runs only if mkdir succeeded```
+
+
+### (> : redirect output and overwrite file.
+
+```echo "hello" > file.txt   # file.txt now contains "hello"```
+
+
+### (>> : append output to file.
+
+```echo "another line" >> file.txt```
+
+## Useful filesystem commands
+```
+mkdir name : create directory
+touch file : create empty file or update timestamp.
+
+rm file : remove file
+
+rm -r folder : remove folder recursively (dangerous — be careful).
+
+cp src dst : copy file/directory (-r for recursive).
+
+mv src dst : move/rename.
+```
+```
+ls                       # list folder
+mkdir myfolder           # create folder
+ls                       # check folder created
+rm -r myfolder && ls     # remove folder and list to verify```
+```
 
