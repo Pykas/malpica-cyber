@@ -20,6 +20,12 @@ Grep
 The grep command allows us to search the contents of files for specific values that we are looking for.
 For exemple, we can hace more than 240 entries of one kind of file and a lot of text that we can't naviagte quickly with the commande cat
 We can use grep + one value and he will find it very quickly ex: grep "81.143.211.90" access.log
+# Search for an IP in an access log:
+grep "81.143.211.90" /var/log/nginx/access.log
+
+# Search recursively in a folder:
+grep -R "ERROR" /var/log/myapp/
+
 
 & = Run a command and continue tyoping commands
 && = Run various commands one after the other but only if all of them are excuted correctly
