@@ -1,7 +1,5 @@
 
-## Linux fundamentals 1
-
-# Linux Fundamentals — Notes
+# Linux Fundamentals 1 — Notes
 
 A quick, practical summary of the first Linux fundamentals I learned.  
 Linux is everywhere: servers, phones (Android), appliances, cars, consoles, IoT, etc.
@@ -27,9 +25,11 @@ The grep command allows us to search the contents of files for specific values t
 For exemple, we can hace more than 240 entries of one kind of file and a lot of text that we can't naviagte quickly with the commande cat
 We can use grep + one value and he will find it very quickly ex: grep "81.143.211.90" access.log
 # Search for an IP in an access log:
-```
 grep "81.143.211.90" /var/log/nginx/access.log
-```
+
+# Search recursively in a folder:
+grep -R "ERROR" /var/log/myapp/
+
 ## Search recursively in a folder:
 
 ```
@@ -77,3 +77,14 @@ ls                       # check folder created
 rm -r myfolder && ls     # remove folder and list to verify```
 ```
 
+Networking basics
+
+ip a : show network interfaces and IP addresses.
+
+ping 1.1.1.1 : check connectivity.
+
+ss -tulpn or netstat -tulpn : show listening ports and which process owns them.
+
+curl -I https://example.com : fetch HTTP headers (quick test endpoint).
+
+tcpdump -i any port 80 -c 100 -w capture.pcap : capture traffic (requires sudo).
