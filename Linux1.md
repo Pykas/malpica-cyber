@@ -15,8 +15,7 @@ Show current working directory.
 ```bash
 pwd
 # Example output: /home/manuel/documents
-
-
+```
 # Find
 The find command is fantastic in the sense that it can be used both very simply or rather complex depending upon what it is you want to do exactly. However, let's stick to the fundamentals first.
 Exemple to find a document instead of navigating or going all into it we can just type the command find + -name + document.txt
