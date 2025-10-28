@@ -1,5 +1,5 @@
 
-##Linux fundamentals
+## Linux fundamentals 1
 
 The first Linux release was in 1991, almost every technology thing now uses linux (Cars, consoles, pcs, android, etc)
 
