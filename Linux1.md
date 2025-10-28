@@ -36,7 +36,7 @@ grep -R "ERROR" /var/log/myapp/
 grep -R "ERROR" /var/log/myapp/
 ```
 
-##Redirections & operators
+## Redirections & operators
 
 ### & : put a command in background (shell job), or in some shells used with nohup.
 Example to run and continue typing:
