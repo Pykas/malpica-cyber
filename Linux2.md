@@ -35,6 +35,7 @@ Copying and moving files is an important functionality on a Linux machine. Start
 2. the name we wish to assign to the new file when copying
 
 CP = To copy files and the content of the files
+
 MV = To rename a folder or a document
 
 Exemple
