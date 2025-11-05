@@ -58,3 +58,113 @@ shutdown /s to turn off
 shutdown /r to restart
 shutdown /a to cancel any shutdown
 ```
+## Windows Powershell
+
+Powershell to say something is the "new" equivalent of cmd, with more commands and better automatization, very useful in company environement
+PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.”
+Powershell is also called object-programming
+
+Searching for Commands in PowerShell
+
+To list all cmdlets that start with a specific word or verb, use:
+```
+Get-Command -Name <pattern>*
+Example:
+Get-Command -Name Remove*
+```
+→ Lists all commands whose names begin with “Remove” (e.g., Remove-Item, Remove-Module, etc.)
+💡 The asterisk () acts as a wildcard to match any remaining characters.*
+
+```
+Echo can be written as write-output
+```
+
+🧩 1. Cmdlet Syntax (Verb–Noun)
+Verb-Noun -Parameter Value
+
+
+Examples
+
+Get-Content -Path C:\file.txt     # Reads file content
+Set-Location C:\Users             # Changes current directory
+
+🔍 2. Discovering Commands
+
+List all available commands:
+
+Get-Command
+
+
+Filter by command type:
+
+Get-Command -CommandType Function
+
+
+Search commands by name pattern:
+
+Get-Command -Name Remove*
+
+
+Search by verb:
+
+Get-Command -Verb Get
+
+🧠 3. Learn About Commands
+
+Display documentation and usage examples:
+
+Get-Help Get-Date
+Get-Help Get-Date -Examples
+
+⚡ 4. Aliases (Shortcuts)
+
+Show all command aliases:
+
+Get-Alias
+
+
+Examples
+
+Alias	Cmdlet Equivalent
+dir	Get-ChildItem
+cd	Set-Location
+cat	Get-Content
+📦 5. Modules and Extra Cmdlets
+
+Find and install new cmdlets from the PowerShell Gallery:
+
+Find-Module -Name PowerShell*
+Install-Module -Name PowerShellGet
+
+🌐 6. Remote Execution
+
+Run a command on another computer:
+
+Invoke-Command -ComputerName Server01 -ScriptBlock { Get-Service }
+
+
+Run a local script remotely:
+
+Invoke-Command -FilePath C:\scripts\test.ps1 -ComputerName Server01
+
+
+Use credentials if needed:
+
+$cred = Get-Credential
+Invoke-Command -ComputerName Server01 -Credential $cred -ScriptBlock { Get-Process }
+
+💬 7. Interactive Remote Session
+
+Connect interactively to a remote system:
+
+Enter-PSSession -ComputerName Server01
+Exit-PSSession
+
+🧾 Summary Table
+Category	Cmdlet	Purpose
+Discover	Get-Command	Lists all commands
+Learn	Get-Help	Shows documentation and examples
+Aliases	Get-Alias	Displays shortcuts for cmdlets
+Modules	Find-Module, Install-Module	Finds and installs new modules
+Remote	Invoke-Command	Runs commands on remote computers
+Interactive	Enter-PSSession	Starts an interactive remote session
